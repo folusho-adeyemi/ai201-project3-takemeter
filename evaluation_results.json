@@ -1,0 +1,16 @@
+{
+  "test_set_size": 71,
+  "label_map": {
+    "analysis": 0,
+    "hot_take": 1,
+    "reaction": 2
+  },
+  "model": "distilbert-base-uncased",
+  "baseline_model": "llama-3.3-70b-versatile",
+  "baseline_accuracy": 0.451,
+  "baseline_macro_f1": 0.37,
+  "finetuned_accuracy": 0.521,
+  "finetuned_macro_f1": 0.23,
+  "accuracy_improvement": 0.07,
+  "note": "Fine-tuned model collapsed to predicting hot_take for every test example; accuracy gain is misleading vs macro-F1 drop."
+}

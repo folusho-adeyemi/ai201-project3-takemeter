@@ -1,0 +1,43 @@
+# Finding analysis-rich r/indieheads threads
+
+Your dataset is thin on `analysis` because most of your threads are news, roasts,
+Fresh releases, or daily chat — those skew hot_take / reaction.
+
+## Best thread types (highest analysis density)
+
+1. **Album Discussion** flair — title looks like:
+   `[Album Discussion] Artist - Album Name`
+   These are literally built for track-by-track and production talk.
+
+2. **"Let's Talk About"** or long-form appreciation posts in the sub search.
+
+3. **NOT** these (low analysis yield):
+   - Roast threads (hot_take jokes)
+   - Fresh / release megathreads (reaction)
+   - News articles (mixed, often off-topic arguments)
+
+## How to find them on Reddit
+
+1. Go to https://www.reddit.com/r/indieheads/
+2. Use the subreddit search box: `Album Discussion`
+3. Sort by **Top** or **New** — pick threads with 50+ comments
+4. Open a thread; skim — you want paragraphs citing production, lyrics, song structure
+
+Good artists for dense analysis (recent-ish, often discussed on indieheads):
+- Big indie releases with dedicated discussion posts (check past 6–12 months)
+- Reissues / anniversary threads (fans compare eras and production)
+- Bands with complex production: Radiohead, Fiona Apple, Björk, Sufjan, etc.
+
+## Add a thread (same browser-json workflow as before)
+
+1. Copy thread URL, append `.json`:
+   https://www.reddit.com/r/indieheads/comments/XXXXX/slug.json
+2. Save page into `data/raw_json/` — use a filename containing `album_discussion`
+   so add_from_json.py can pre-tag as analysis seeds, e.g.:
+   `album_discussion_radiohead_hail_to_the_thief.json`
+3. Run:
+   python add_from_json.py data/raw_json/album_discussion_radiohead_hail_to_the_thief.json
+4. Review every new row (label_tool.py or edit CSV) — don't trust pre-tags blindly.
+5. python check_distribution.py
+
+Target: add ~40–60 more `analysis` rows to get from 32 (~10%) toward ~70+ (~20%+).

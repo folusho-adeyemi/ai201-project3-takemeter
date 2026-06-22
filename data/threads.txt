@@ -1,0 +1,21 @@
+# Curated r/indieheads thread URLs — one per line. "#" lines and blanks ignored.
+# collect.py appends ".json" automatically.
+
+# hot_take-rich: roast / opinion
+https://www.reddit.com/r/indieheads/comments/bshqd5/rindieheads_roast_of_the_cure/
+
+# news threads (reactions + hot takes)
+https://www.reddit.com/r/indieheads/comments/1ubfyri/jonny_greenwood_radiohead_guitarist_cancelling/
+https://www.reddit.com/r/indieheads/comments/1u6fwky/oliver_tree_detailed_the_surprising_terms_of_his/
+https://www.reddit.com/r/indieheads/comments/1u7brbe/we_werent_allowed_to_meet_oasis_japanese_punk/
+
+# Fresh / release threads (reaction-rich)
+https://www.reddit.com/r/indieheads/comments/1u6cna0/fresh_julia_jacklin_get_away_from_me_i_think_ill/
+https://www.reddit.com/r/indieheads/comments/1u9mpp0/fresh_album_pond_terrestrials/
+
+# daily discussions (mixed)
+https://www.reddit.com/r/indieheads/comments/1ub1m13/saturday_general_discussion_20_june_2026/
+https://www.reddit.com/r/indieheads/comments/1uayq51/saturday_daily_music_discussion_20_june_2026/
+
+# album discussion (analysis-rich)
+https://www.reddit.com/r/indieheads/comments/1u5q6l0/album_discussion_modest_mouse_an_eraser_and_a_maze/

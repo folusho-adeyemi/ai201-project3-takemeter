@@ -1,0 +1,21 @@
+# API keys & secrets — never commit these
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Raw, unlabeled pulls + browser-saved JSON (the *labeled* CSV in data/ IS committed)
+data/raw_*.csv
+data/raw_json/
+data/dropped.txt
+
+# macOS
+.DS_Store

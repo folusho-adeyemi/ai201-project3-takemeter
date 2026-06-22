@@ -72,6 +72,23 @@ An emotional comment that also contains a genuine argument.
 **Rule:** Substance priority promotes any comment containing genuine, load-bearing reasoning to `analysis`, regardless of emotional framing. → **`analysis`**.
 *Known risk:* a mostly-emotional comment with one buried real reason will be labeled `analysis`; we accept this for annotation consistency and will watch for it in error analysis.
 
+### Documented hard cases from real data (annotation)
+
+**Hard case 1 — `analysis` vs `hot_take` (Cure roast thread):**
+> "Pornography can be a difficult album to get into, but you just have to realize that drum machines were very primitive back then."
+
+Could be `hot_take` (casual aside) or `analysis` (production/historical context explains accessibility). **Decision:** `analysis` — the drum-machine detail is load-bearing for *why* the album is hard to enter.
+
+**Hard case 2 — `reaction` vs `hot_take` (Cure roast / dedupe conflict):**
+> "the only thing they've cured is my insomnia (but seriously tho does anyone have good tips for getting to sleep…)"
+
+Roast joke + personal aside. **Decision:** `hot_take` in final dataset (dedupe kept first row); could be `reaction` if treating the insomnia line as in-the-moment aside.
+
+**Hard case 3 — `reaction` vs `hot_take` (Tiny Desk, test set):**
+> "I love this band, and I even got to attend their Tiny Desk. It kicked ass."
+
+Event-anchored positive experience vs bare opinion. **Decision:** `reaction`. Both fine-tuned and baseline models predicted `hot_take` — validates that this boundary is hard.
+
 ---
 
 ## 4. Data collection plan
@@ -148,6 +165,7 @@ Candidates, in rough priority order; planning.md will be updated before any is b
 ## Status
 - [x] Milestone 1 — label taxonomy, edge cases, decision rules
 - [x] Milestone 2 — this planning.md (all six questions + AI Tool Plan)
-- [ ] Milestone 3 — data collection & annotation
-- [ ] Milestone 4 — fine-tuning pipeline
-- [ ] Milestone 5 — baseline comparison & evaluation report
+- [x] Milestone 3 — data collection & annotation (468 unique labels; minimal hand review)
+- [x] Milestone 4 — Groq zero-shot baseline on test set (acc 0.451, macro-F1 0.37)
+- [x] Milestone 5 — fine-tuning DistilBERT (acc 0.521, macro-F1 0.23; majority-class collapse)
+- [x] Milestone 6 — README evaluation report (demo video: pending user recording)
